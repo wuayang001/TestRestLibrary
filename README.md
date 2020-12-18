@@ -2,4 +2,4 @@
 dp2Library RESTful WebService 接口使用示例
 
 
-http://dp2003.com/shoare/TestRestLibrary.zip
+http://dp2003.com/share/TestRestLibrary.zip
