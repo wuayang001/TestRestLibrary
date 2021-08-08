@@ -23,6 +23,7 @@ using System.Threading;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Security.Permissions;
+using DigitalPlatform.Xml;
 
 namespace TestRestLibrary
 {
@@ -610,7 +611,10 @@ namespace TestRestLibrary
                     int i = 0;
                     foreach (string text in response.results)
                     {
-                        strText += "results[" + i.ToString() + "]:\r\n" + text + "\r\n\r\n";
+                        // 得到缩进格式的xml
+                        string indentXml= DomUtil.GetIndentXml(text);
+
+                        strText += "results[" + i.ToString() + "]:\r\n" + indentXml + "\r\n\r\n";
                         i++;
                     }
 
@@ -618,6 +622,7 @@ namespace TestRestLibrary
                 }
 
                 this.getReaderInfo_textBox_timestamp.Text = StringUtil.GetHexTimeStampString(response.baTimestamp);
+                this.setReaderInfo_textBox_oldTimestamp.Text=this.getReaderInfo_textBox_timestamp.Text;
             }
             catch (Exception ex)
             {

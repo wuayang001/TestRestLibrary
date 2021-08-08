@@ -73,19 +73,19 @@
             </TabItem>
             <TabItem Header="SetReaderInfo" Name="tabItem_setReaderInfo">
                 <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <ScrollViewer Height="Auto" HorizontalAlignment="Stretch" Margin="6,6,0,0" VerticalAlignment="Stretch" Width="Auto" PanningMode="None">
+                    <ScrollViewer Height="503" HorizontalAlignment="Stretch" Margin="6,6,0.333,-0.333" VerticalAlignment="Top" Width="Auto" PanningMode="None">
                         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                             <TextBox Height="23" HorizontalAlignment="Left" Margin="154.005,12,0,0" Name="setReaderInfo_textBox_action" VerticalAlignment="Top" Width="165" />
                             <Label Content="strAction" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="111" />
                             <TextBox Height="23" HorizontalAlignment="Left" Margin="154.005,41,0,0" Name="setReaderInfo_textBox_recPath" VerticalAlignment="Top" Width="165" />
                             <Label Content="strRecPath" Height="28" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Width="111" />
-                            <Button Content="SetReaderInfo" Height="23" HorizontalAlignment="Left" Margin="154.005,274,0,0" Name="setReaderInfo_button_setReaderInfo" VerticalAlignment="Top" Width="122" Click="setReaderInfo_button_setReaderInfo_Click" />
-                            <TextBox Height="81" Margin="154.005,69.347,10.762,0" Name="setReaderInfo_textBox_newXml" VerticalAlignment="Top" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" />
+                            <Button Content="SetReaderInfo" Height="23" HorizontalAlignment="Left" Margin="154,471,0,0" Name="setReaderInfo_button_setReaderInfo" VerticalAlignment="Top" Width="122" Click="setReaderInfo_button_setReaderInfo_Click" />
+                            <TextBox Margin="154,69,11,0" Name="setReaderInfo_textBox_newXml" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Height="277" VerticalAlignment="Top" />
                             <Label Content="strNewXml" Height="28" HorizontalAlignment="Left" Margin="10,67.347,0,0" VerticalAlignment="Top" Width="111" />
-                            <TextBox AcceptsReturn="True" Height="81" Margin="154.005,156.347,10.762,0" Name="setReaderInfo_textBox_oldXml" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextWrapping="Wrap" />
-                            <Label Content="strOldXml" Height="28" HorizontalAlignment="Left" Margin="10,154.347,0,0" VerticalAlignment="Top" Width="111" />
-                            <TextBox Height="23" Margin="154.005,243.347,10.762,0" Name="setReaderInfo_textBox_oldTimestamp" VerticalAlignment="Top" />
-                            <Label Content="baOldTimestamp" Height="28" HorizontalAlignment="Left" Margin="10.002,241.347,0,0" Name="label16" VerticalAlignment="Top" Width="129" />
+                            <TextBox AcceptsReturn="True" Height="81" Margin="154,351,10,0" Name="setReaderInfo_textBox_oldXml" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextWrapping="Wrap" />
+                            <Label Content="strOldXml" Height="28" HorizontalAlignment="Left" Margin="10,348,0,0" VerticalAlignment="Top" Width="111" />
+                            <TextBox Height="23" Margin="154,440,11,0" Name="setReaderInfo_textBox_oldTimestamp" VerticalAlignment="Top" />
+                            <Label Content="baOldTimestamp" Height="28" HorizontalAlignment="Left" Margin="10,438,0,0" Name="label16" VerticalAlignment="Top" Width="129" />
                         </Grid>
                     </ScrollViewer>
                 </Grid>
