@@ -289,13 +289,9 @@
                     <TextBox Height="24" HorizontalAlignment="Right" Margin="0,44,239,0" Name="GetEntities_textBox_lStart" VerticalAlignment="Top" Width="93" Text="0" />
                     <TextBox Height="24" HorizontalAlignment="Right" Margin="0,73,239,0" Name="GetEntities_textBox_lCount" VerticalAlignment="Top" Width="93" Text="100" />
                     <Label Content="strStyle:" Height="28" HorizontalAlignment="Left" Margin="10,105.347,0,0" Name="label50" VerticalAlignment="Top" />
-                    <ComboBox Height="24" HorizontalAlignment="Right" Margin="0,107,239,0" Name="GetEntities_comboBox_strStyle" VerticalAlignment="Top" Width="93">
-                        <ComboBoxItem Content="opac" IsSelected="True" />
-                        <ComboBoxItem Content="onlygetpath" />
-                        <ComboBoxItem Content="getfirstxml" />
-                    </ComboBox>
                     <Label Content="strLang:" Height="25" HorizontalAlignment="Left" Margin="10,137.347,0,0" Name="label49" VerticalAlignment="Top" Width="56" />
                     <TextBox Height="21" HorizontalAlignment="Left" Margin="122.397,139.347,0,0" Name="GetEntities_textBox_strLang" Text="zh" VerticalAlignment="Top" Width="136" />
+                    <TextBox Height="24" HorizontalAlignment="Right" Margin="0,107,101,0" x:Name="GetEntities_textBox_strStyle" VerticalAlignment="Top" Width="231" Text="opac" />
                 </Grid>
             </TabItem>
             <TabItem Header="GetBiblioSummary" x:Name="GetBiblioSummary_tabItem_GetBiblioSummary" Margin="0,-2,1,-3">

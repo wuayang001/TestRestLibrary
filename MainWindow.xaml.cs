@@ -109,7 +109,10 @@ namespace TestRestLibrary
             this.GetEntities_textBox_strLang.Text = Properties.Settings.Default.getEntities_lang;
             this.GetEntities_textBox_lCount.Text = Properties.Settings.Default.getEntities_count;
             this.GetEntities_textBox_lStart.Text = Properties.Settings.Default.getEntities_start;
-            this.GetEntities_comboBox_strStyle.Text = Properties.Settings.Default.getEntities_style;
+
+            // 2022/8/9 替换为输入框
+            // this.GetEntities_comboBox_strStyle.Text = Properties.Settings.Default.getEntities_style;
+            this.GetEntities_textBox_strStyle.Text = Properties.Settings.Default.getEntities_style;
 
             this.GetBiblioSummary_textBox_strItemBarcode.Text = Properties.Settings.Default.getBiblioSummary_itemBarcode;
             this.GetBiblioSummary_textBox_strConfirmItemRecPath.Text = Properties.Settings.Default.getBiblioSummary_confirmItemRecPath;
@@ -208,7 +211,10 @@ namespace TestRestLibrary
             Properties.Settings.Default.getEntities_lang = this.GetEntities_textBox_strLang.Text;
             Properties.Settings.Default.getEntities_count = this.GetEntities_textBox_lCount.Text;
             Properties.Settings.Default.getEntities_start = this.GetEntities_textBox_lStart.Text;
-            Properties.Settings.Default.getEntities_style = this.GetEntities_comboBox_strStyle.Text;
+
+            // 2022/8/9 替换为输入框
+            Properties.Settings.Default.getEntities_style = this.GetEntities_textBox_strStyle.Text;
+            //Properties.Settings.Default.getEntities_style = this.GetEntities_comboBox_strStyle.Text;
 
             Properties.Settings.Default.getBiblioSummary_itemBarcode = this.GetBiblioSummary_textBox_strItemBarcode.Text;
             Properties.Settings.Default.getBiblioSummary_confirmItemRecPath = this.GetBiblioSummary_textBox_strConfirmItemRecPath.Text;
@@ -1070,7 +1076,8 @@ namespace TestRestLibrary
                 request.lCount = Convert.ToInt64(this.GetEntities_textBox_lCount.Text);
                 request.lStart = Convert.ToInt64(this.GetEntities_textBox_lStart.Text);
                 request.strLang = this.GetEntities_textBox_strLang.Text;
-                request.strStyle = this.GetEntities_comboBox_strStyle.Text;
+                request.strStyle = GetEntities_textBox_strStyle.Text;// //this.GetEntities_comboBox_strStyle.Text;
+
 
 
                 byte[] baData = Encoding.UTF8.GetBytes(Serialize(request));
