@@ -197,6 +197,10 @@ namespace TestRestLibrary
         public string strSearchStyle { get; set; }
         [DataMember]
         public string strOutputStyle { get; set; }
+
+        // 2022/08/27-ryh增加filter字段
+        [DataMember]
+        public string strLocationFilter { get; set; }
     }
 
     //SearchBiblioResult

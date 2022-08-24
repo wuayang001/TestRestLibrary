@@ -74,7 +74,7 @@ namespace TestRestLibrary
             this.changeReaderPassword_passwordBox_new.Password = Properties.Settings.Default.changeReaderPassword_password_new;
 
             this.SearchBiblio_textBox_nPerMax.Text = Properties.Settings.Default.searchBiblio_perMax;
-            this.SearchBiblio_comboBox_strBiblioDbNames.Text = Properties.Settings.Default.searchBiblio_biblioDbNames;
+            this.SearchBiblio_textBox_dbs.Text = Properties.Settings.Default.searchBiblio_biblioDbNames;
             this.SearchBiblio_comboBox_strFromStyle.Text = Properties.Settings.Default.searchBiblio_fromStyle;
             this.SearchBiblio_comboBox_strMatchStyle.Text = Properties.Settings.Default.searchBiblio_matchStyle;
             this.SearchBiblio_textBox_strLang.Text = Properties.Settings.Default.searchBiblio_lang;
@@ -176,7 +176,7 @@ namespace TestRestLibrary
             Properties.Settings.Default.changeReaderPassword_password_new = this.changeReaderPassword_passwordBox_new.Password;
 
             Properties.Settings.Default.searchBiblio_perMax = this.SearchBiblio_textBox_nPerMax.Text;
-            Properties.Settings.Default.searchBiblio_biblioDbNames = this.SearchBiblio_comboBox_strBiblioDbNames.Text;
+            Properties.Settings.Default.searchBiblio_biblioDbNames = this.SearchBiblio_textBox_dbs.Text;//this.SearchBiblio_comboBox_strBiblioDbNames.Text;
             Properties.Settings.Default.searchBiblio_fromStyle = this.SearchBiblio_comboBox_strFromStyle.Text;
             Properties.Settings.Default.searchBiblio_matchStyle = this.SearchBiblio_comboBox_strMatchStyle.Text;
             Properties.Settings.Default.searchBiblio_lang = this.SearchBiblio_textBox_strLang.Text;
@@ -745,7 +745,7 @@ namespace TestRestLibrary
 
                 SearchBiblioRequest request = new SearchBiblioRequest();
                 request.strQueryWord = this.SearchBiblio_textBox_strQueryWord.Text;
-                request.strBiblioDbNames = this.SearchBiblio_comboBox_strBiblioDbNames.Text;
+                request.strBiblioDbNames = this.SearchBiblio_textBox_dbs.Text.Trim();//this.SearchBiblio_comboBox_strBiblioDbNames.Text;
                 request.nPerMax = Convert.ToInt32(this.SearchBiblio_textBox_nPerMax.Text);
                 request.strLang = this.SearchBiblio_textBox_strLang.Text;
                 request.strSearchStyle = this.SearchBiblio_textBox_strSearchStyle.Text;
@@ -753,6 +753,9 @@ namespace TestRestLibrary
                 request.strFromStyle = this.SearchBiblio_comboBox_strFromStyle.Text;
                 request.strMatchStyle = this.SearchBiblio_comboBox_strMatchStyle.Text;
                 request.strResultSetName = this.SearchBiblio_textBox_strResultSetName.Text;
+
+                request.strLocationFilter = this.SearchBiblio_textBox_filter.Text;//2022/8/27增加
+                
 
                 byte[] baData = Encoding.UTF8.GetBytes(Serialize(request));
                 byte[] result = client.UploadData(GetMethodUrl("SearchBiblio"),

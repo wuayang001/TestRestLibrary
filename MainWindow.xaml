@@ -142,9 +142,9 @@
                     </ScrollViewer>
                 </Grid>
             </TabItem>
-            <TabItem Header="SearchBiblio" Name="tabItem_SearchBiblio">
+            <TabItem Header="SearchBiblio" Name="tabItem_SearchBiblio" Height="21" VerticalAlignment="Top">
                 <Grid>
-                    <Button Content="SearchBiblio" Height="23" HorizontalAlignment="Left" Margin="154.167,305.667,0,0" Name="SearchBiblio_button_SearchBiblio" VerticalAlignment="Top" Width="102" Click="SearchBiblio_button_SearchBiblio_Click" />
+                    <Button Content="SearchBiblio" Height="23" HorizontalAlignment="Left" Margin="169,364,0,0" Name="SearchBiblio_button_SearchBiblio" VerticalAlignment="Top" Width="102" Click="SearchBiblio_button_SearchBiblio_Click" />
                     <TextBox Height="24" HorizontalAlignment="Right" Margin="0,6,81,0" Name="SearchBiblio_textBox_strQueryWord" VerticalAlignment="Top" Width="157" />
                     <Label Content="strQueryWord:" Height="28" HorizontalAlignment="Left" Margin="30,6,0,0" Name="label18" VerticalAlignment="Top" />
                     <ComboBox Height="24" HorizontalAlignment="Right" Margin="0,40,81,0" Name="SearchBiblio_comboBox_strFromStyle" VerticalAlignment="Top" Width="157">
@@ -153,19 +153,14 @@
                         <ComboBoxItem Content="题名拼音" />
                         <ComboBoxItem Content="索取类号" />
                         <ComboBoxItem Content="批次号" />
-                        <ComboBoxItem Content="__id" />
+                        <ComboBoxItem Content="recid" />
                     </ComboBox>
                     <Label Content="strFromStyle:" HorizontalAlignment="Left" Margin="30,40,0,0" Name="label19" Height="28" VerticalAlignment="Top" />
                     <Label Content="strBiblioDbNames:" Height="28" HorizontalAlignment="Left" Margin="30,74,0,0" Name="label23" VerticalAlignment="Top" />
-                    <ComboBox Height="24" HorizontalAlignment="Right" Margin="0,73.843,81,0" Name="SearchBiblio_comboBox_strBiblioDbNames" VerticalAlignment="Top" Width="157">
-                        <ComboBoxItem Content="国图数据源书目" IsSelected="True" />
-                        <ComboBoxItem Content="中文图书"/>
-                        <ComboBoxItem Content="期刊" />
-                    </ComboBox>
                     <Label Content="strResultSetName:" Height="28" HorizontalAlignment="Left" Margin="30,104.433,0,0" Name="label24" VerticalAlignment="Top" />
                     <TextBox Height="24" HorizontalAlignment="Right" Margin="0,106.767,81,0" Name="SearchBiblio_textBox_strResultSetName" VerticalAlignment="Top" Width="157" Text="biblio" />
                     <Label Content="strMatchStyle:" Height="28" HorizontalAlignment="Left" Margin="30,138.433,0,0" Name="label25" VerticalAlignment="Top" IsEnabled="True" />
-                    <ComboBox Height="24" HorizontalAlignment="Right" Margin="0,139.934,81,0" Name="SearchBiblio_comboBox_strMatchStyle" VerticalAlignment="Top" Width="157">
+                    <ComboBox Height="24" HorizontalAlignment="Right" Margin="0,139.934,81,0" Name="SearchBiblio_comboBox_strMatchStyle" VerticalAlignment="Top" Width="157" >
                         <ComboBoxItem Content="exact" IsSelected="True" />
                         <ComboBoxItem Content="left" />
                         <ComboBoxItem Content="middle" />
@@ -179,6 +174,9 @@
                     <TextBox Height="24" HorizontalAlignment="Right" Margin="0,243.335,81,0" Name="SearchBiblio_textBox_strSearchStyle" VerticalAlignment="Top" Width="157" Text="desc" />
                     <Label Content="strOutputStyle:" Height="28" HorizontalAlignment="Left" IsEnabled="True" Margin="30,273.335,0,0" Name="label31" VerticalAlignment="Top" />
                     <TextBox Height="24" HorizontalAlignment="Right" Margin="0,273.335,81,0" Name="SearchBiblio_textBox_strOutputStyle" Text="id,cols" VerticalAlignment="Top" Width="157" />
+                    <Label Content="strLocationFilter:" Height="28" HorizontalAlignment="Left" IsEnabled="True" Margin="30,313,0,0" x:Name="label31_Copy" VerticalAlignment="Top" />
+                    <TextBox Height="24" HorizontalAlignment="Right" Margin="0,313,81,0" x:Name="SearchBiblio_textBox_filter" VerticalAlignment="Top" Width="157" />
+                    <TextBox Height="24" HorizontalAlignment="Right" Margin="0,79,81,0" x:Name="SearchBiblio_textBox_dbs" VerticalAlignment="Top" Width="157" Text="中文图书" />
                 </Grid>
             </TabItem>
             <TabItem Header="GetSearchResult" Name="tabItem_GetSearchResult">
